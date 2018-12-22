@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_21_141459) do
+ActiveRecord::Schema.define(version: 2018_12_22_094014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
-    t.boolean "correct", default: false
-    t.bigint "question_id"
+    t.boolean "correct", default: false, null: false
+    t.bigint "question_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2018_12_21_141459) do
 
   create_table "questions", force: :cascade do |t|
     t.text "body", null: false
-    t.bigint "test_id"
+    t.bigint "test_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["test_id"], name: "index_questions_on_test_id"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2018_12_21_141459) do
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 0, null: false
-    t.bigint "category_id"
+    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_tests_on_category_id"
