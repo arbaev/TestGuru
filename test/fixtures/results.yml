@@ -2,10 +2,6 @@
 
 one:
   score: 1
-  test: one
-  user: one
 
 two:
   score: 1
-  test: two
-  user: two

@@ -1,9 +1,8 @@
 class Test < ApplicationRecord
-  belongs_to :category
-
-  def self.titles_by_category(category)
-    cat_id = Category.find_by(title: category).id
-    tests_selected = Test.where(category_id: cat_id).order(title: :asc)
-    tests_selected.reduce([]) { |acc, test| acc << test.title }
+  def self.by_category(cat)
+    Test.joins('JOIN categories ON categories.id = tests.category_id')
+        .where(categories: { title: cat })
+        .order(:title)
+        .pluck(:title)
   end
 end
