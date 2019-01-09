@@ -2,9 +2,9 @@ ruby = Category.create!(title: 'Ruby')
 html = Category.create!(title: 'HTML')
 css  = Category.create!(title: 'CSS')
 
-tim = User.create!(name: 'Tim')
-zeus = User.create!(name: 'Zeus')
-afina = User.create!(name: 'Afina')
+tim = User.create!(name: 'Tim', email: 'tim@testguru.io')
+zeus = User.create!(name: 'Zeus', email: 'zeus@testguru.io')
+afina = User.create!(name: 'Afina', email: 'afina@testguru.io')
 
 tests = Test.create!(
   [
