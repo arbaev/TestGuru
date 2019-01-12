@@ -1,2 +1,7 @@
-<div>Test: <%= @test.title %></div>
-<div>Question <strong><%= @test.questions[params[:id].to_i].body %></strong></div>
+<div>Test: <%= @question.test.title %> (test_id:<%= @question.test.id %>)</div>
+<div>Question <strong><%= @question.body %></strong>
+  <span>
+    <%= link_to "Delete", question_path, method: :delete,
+                                         data: {confirm: "Are you sure?"} %>
+  </span>
+</div>
