@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_action :find_test, only: [:index, :create]
   before_action :find_question, only: [:show, :destroy]
 
-  rescue_from StandardError, with: :rescue_from_question_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_question_not_found
 
   def index
     render inline: "<% @test.questions.each do |q| %><p>id:<%= q.id %> - <%= q.body %></p><% end %>"
