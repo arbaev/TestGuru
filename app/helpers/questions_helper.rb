@@ -5,7 +5,7 @@ module QuestionsHelper
   end
 
   def question_nav
-    to_test = link_to 'Back to test', test_questions_path(@test)
+    to_test = link_to 'Back to test', @test
     to_all_tests = link_to 'Back to all tests', tests_path
     to_test + ' | ' + to_all_tests
   end
