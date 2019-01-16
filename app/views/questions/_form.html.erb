@@ -1,5 +1,4 @@
-<% model = params[:action] == 'new' ? [:test, @question] : @question %>
-<%= form_with model: model, local: true do |form| %>
+<%= form_with model: [@test, @question], local: true do |form| %>
   <%= render 'shared/errors', resource: @question %>
   <p>
     <%= form.label :body %><br>
