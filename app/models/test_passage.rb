@@ -14,6 +14,10 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def success
+    score * 100 / test.total_questions
+  end
+
   private
 
   def before_validation_set_question

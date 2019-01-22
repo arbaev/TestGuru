@@ -6,5 +6,12 @@
   Correct answers: <%= @test_passage.score %>
 </p>
 
+<p>
+  your result: <%= @test_passage.success %>%
+
+</p>
+<h2>
+  <%= result_message(@test_passage.success) %>
+</h2>
 <hr>
 <%= test_nav(@test_passage.test) %>
