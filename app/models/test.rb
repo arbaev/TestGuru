@@ -21,4 +21,12 @@ class Test < ApplicationRecord
   def self.by_category(category)
     tests_by_category(category).pluck(:title)
   end
+
+  def total_questions
+    questions.size
+  end
+
+  def question_number(test_passage)
+    questions.pluck(:id).index(test_passage.current_question.id) + 1
+  end
 end
