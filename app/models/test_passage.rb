@@ -18,6 +18,10 @@ class TestPassage < ApplicationRecord
     (score * 100.0 / test.total_questions).round(2)
   end
 
+  def question_number
+    test.questions.order(:id).where('id <= ?', current_question).size
+  end
+
   private
 
   def before_validation_set_question
