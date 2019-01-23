@@ -4,7 +4,7 @@ module TestPassagesHelper
   end
 
   def result_message(result)
-    if result >= 85
+    if @test_passage.successful?
       content_tag(:h2,
                   "Congratulations! Your result is #{result}%, you passed the test.",
                   class: 'result_success')

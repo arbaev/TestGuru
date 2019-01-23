@@ -5,6 +5,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question
 
+  SUCCESS_VALUE = 85
+
   def accept!(answer_ids)
     self.score += 1 if correct_answer?(answer_ids)
     save!
@@ -18,6 +20,12 @@ class TestPassage < ApplicationRecord
     (score * 100.0 / test.total_questions).round(2)
   end
 
+  def successful?
+    if completed?
+      result_percentage >= SUCCESS_VALUE
+    end
+  end
+
   def question_number
     test.questions.order(:id).where('id <= ?', current_question).size
   end
@@ -25,14 +33,15 @@ class TestPassage < ApplicationRecord
   private
 
   def before_validation_set_question
-    self.current_question = if current_question.nil?
-                              test.questions.first
-                            else
-                              test.questions
-                                  .order(:id)
-                                  .where('id > ?', current_question.id)
-                                  .first
-                            end
+    self.current_question = next_question
+  end
+
+  def next_question
+    if current_question.nil?
+      test.questions.first
+    else
+      test.questions.order(:id).where('id > ?', current_question.id).first
+    end
   end
 
   def correct_answer?(answer_ids)
