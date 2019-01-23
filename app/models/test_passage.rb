@@ -14,8 +14,8 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
-  def success
-    score * 100 / test.total_questions
+  def result_percentage
+    (score * 100.0 / test.total_questions).round(2)
   end
 
   private
