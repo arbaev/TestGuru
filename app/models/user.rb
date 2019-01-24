@@ -1,9 +1,11 @@
 class User < ApplicationRecord
-  include Auth
-
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authorship, class_name: 'Test', foreign_key: 'author_id', dependent: :nullify
+
+  has_secure_password
+
+  validates :name, :email, presence: true
 
   def tests_by_level(level)
     tests.where(level: level)
