@@ -1,0 +1,12 @@
+<h1><%= @test_passage.test.title %> was completed!</h1>
+
+<p><%= total_questions_helper %></p>
+
+<p>
+  Correct answers: <%= @test_passage.score %>
+</p>
+
+<%= result_message(@test_passage.result_percentage) %>
+
+<hr>
+<%= test_nav(@test_passage.test) %>

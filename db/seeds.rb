@@ -38,6 +38,6 @@ end
 users = [tim, zeus, afina]
 users.each do |user|
   tests.sample(3).each do |test|
-    Result.create(score: rand(1..3), test: test, user: user)
+    TestPassage.create(score: rand(1..3), test: test, user: user)
   end
 end
