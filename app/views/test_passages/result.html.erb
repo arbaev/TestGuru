@@ -6,8 +6,7 @@
   Correct answers: <%= @test_passage.score %>
 </p>
 
-<h2>
-  <%= result_message(@test_passage.result_percentage) %>
-</h2>
+<%= result_message(@test_passage.result_percentage) %>
+
 <hr>
 <%= test_nav(@test_passage.test) %>

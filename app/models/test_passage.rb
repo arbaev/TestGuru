@@ -1,11 +1,12 @@
 class TestPassage < ApplicationRecord
+  # процент правильных ответов выше которого тест засчитывается успешно пройденным
+  SUCCESS_VALUE = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question
-
-  SUCCESS_VALUE = 85
 
   def accept!(answer_ids)
     self.score += 1 if correct_answer?(answer_ids)
@@ -21,9 +22,7 @@ class TestPassage < ApplicationRecord
   end
 
   def successful?
-    if completed?
-      result_percentage >= SUCCESS_VALUE
-    end
+    result_percentage >= SUCCESS_VALUE if completed?
   end
 
   def question_number
