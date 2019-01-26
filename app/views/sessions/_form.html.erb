@@ -1,8 +1,5 @@
 <%= form_with url: sessions_path, local: true do |form| %>
-  <% flash.each do |name, msg| -%>
-    <%= flash_message(name, msg) %>
-  <% end -%>
-
+  <%= flash_message %>
   <p>
     <%= form.label :email %><br>
     <%= form.text_field :email, id: :user_email %>
