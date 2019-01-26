@@ -1,0 +1,6 @@
+<header class="header">
+  <% if logged_in? %>
+    <%= content_tag :p, "Welcome, guru #{current_user.name}!", class: "account"
+    %>
+  <% end %>
+</header>

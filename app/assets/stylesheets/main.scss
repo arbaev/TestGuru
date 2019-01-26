@@ -1,9 +1,14 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
 .container {
   width: 80%;
   margin: 0 auto;
 }
 .content {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 2em);
 }
 .footer {
   height: 50px;
