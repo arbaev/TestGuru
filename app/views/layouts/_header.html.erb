@@ -1,10 +1,17 @@
 <header class="header">
-  <p class="account">
-    <% if logged_in? %>
-      Welcome, guru <strong><%= current_user.name %></strong>! |
-      <%= link_to 'Logout', logout_path, method: :delete %>
-    <% else %>
-      Welcome to TestGuru!
-    <% end %>
-  </p>
+  <div class="container">
+    <div class="topbar">
+
+        <div class="logo__title">TestGuru</div>
+      <div class="account">
+        <% if logged_in? %>
+          Welcome, guru <strong><%= current_user.name %></strong>! |
+          <%= link_to 'Logout', logout_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Login', login_path %> |
+          <%= link_to 'Signup', signup_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </header>

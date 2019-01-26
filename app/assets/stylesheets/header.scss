@@ -2,7 +2,18 @@
   background: #ffdd2d;
   padding: 4px 0;
 }
+.topbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo__title {
+  font-size: 1.8em;
+  font-weight: bold;
+  padding: 5px 0;
+}
 .account {
   text-align: right;
-  margin-right: 2em;
 }
