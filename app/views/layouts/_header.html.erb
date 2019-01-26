@@ -1,6 +1,10 @@
 <header class="header">
-  <% if logged_in? %>
-    <%= content_tag :p, "Welcome, guru #{current_user.name}!", class: "account"
-    %>
-  <% end %>
+  <p class="account">
+    <% if logged_in? %>
+      Welcome, guru <strong><%= current_user.name %></strong>! |
+      <%= link_to 'Logout', logout_path, method: :delete %>
+    <% else %>
+      Welcome to TestGuru!
+    <% end %>
+  </p>
 </header>
