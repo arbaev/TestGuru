@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
   def destroy
     session.clear
     @current_user = nil
-    redirect_to login_path, notice: 'Goodbye!'
+    redirect_to root_path, notice: 'Goodbye!'
   end
 end

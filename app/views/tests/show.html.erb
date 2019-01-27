@@ -6,12 +6,16 @@
   <tr>
     <th>id</th>
     <th>Question</th>
-    <th colspan="4">Actions</th>
+    <% if logged_in? %>
+      <th colspan="4">Actions</th>
+    <% end %>
   </tr>
 
   <%= render @questions %>
 </table>
 <hr>
 <%= link_to 'Back to tests', tests_path %>
-&nbsp;|&nbsp;
-<%= link_to 'Create new question', new_test_question_path(@test.id) %>
+<% if logged_in? %>
+  &nbsp;|&nbsp;
+  <%= link_to 'Create new question', new_test_question_path(@test.id) %>
+<% end %>

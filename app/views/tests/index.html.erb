@@ -1,3 +1,5 @@
+<%= flash_message %>
+
 <h1>Tests list</h1>
 
 <table>
@@ -6,12 +8,16 @@
     <th>Questions</th>
     <th>Level</th>
     <th>Category</th>
-    <th colspan="2">Actions</th>
+    <% if logged_in? %>
+      <th colspan="2">Actions</th>
+    <% end %>
   </tr>
 
   <%= render @tests %>
 </table>
 <hr>
-<p>
-  <%= link_to 'Create new test', new_test_path %>
-</p>
+<% if logged_in? %>
+  <p>
+    <%= link_to 'Create new test', new_test_path %>
+  </p>
+<% end %>
