@@ -1,0 +1,24 @@
+<h1><%= current_user.name %></h1>
+
+<h2>Profile</h2>
+<p>
+  Email: <strong><%= current_user.email %></strong>
+</p>
+
+<h2>Test passage</h2>
+
+<table>
+  <%= render "tests/test_header" %>
+  <%= render current_user.tests %>
+</table>
+<hr>
+
+<h2>Test authorship</h2>
+
+<table>
+  <%= render "tests/test_header" %>
+  <%= render current_user.authorship %>
+</table>
+<hr>
+
+
