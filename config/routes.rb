@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     end
 
     post :start, on: :member
+    get :start, on: :member
   end
 
   resources :test_passages, only: %i[show update] do
