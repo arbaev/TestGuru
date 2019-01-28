@@ -1,5 +1,5 @@
 class TestsController < ApplicationController
-  before_action :authenticate_user!, only: :start
+  before_action :authenticate_user!, only: %i[edit update destroy start create]
   before_action :find_test, only: %i[show edit update destroy start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_test_not_found
@@ -17,8 +17,7 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = Test.new(test_params)
-    @test.author = current_user
+    @test = current_user.authorships.build(test_params)
 
     if @test.save
       redirect_to @test

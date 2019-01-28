@@ -1,11 +1,10 @@
 module SessionsHelper
   def flash_message
     unless flash.empty?
-      result = ""
-      flash.each do |name, msg|
-        result += content_tag :p, msg, class: "flash flash-#{name}"
+      messages = flash.reduce("") do |acc, (name, msg)|
+        acc += content_tag :p, msg, class: "flash flash-#{name}"
       end
-      render inline: result
+      messages.html_safe
     end
   end
 end

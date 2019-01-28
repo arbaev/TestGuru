@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by(email: params[:email])
+    user = User.find_by(email: params[:email].downcase!)
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
@@ -15,7 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
-    cookies.clear
     @current_user = nil
     redirect_to root_path, notice: 'Goodbye!'
   end
