@@ -21,6 +21,6 @@ class User < ApplicationRecord
   private
 
   def before_save_email_downcase
-    email.downcase!
+    self.email = email.downcase
   end
 end
