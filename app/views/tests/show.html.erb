@@ -6,7 +6,7 @@
   <tr>
     <th>id</th>
     <th>Question</th>
-    <% if logged_in? %>
+    <% if user_signed_in? %>
       <th colspan="4">Actions</th>
     <% end %>
   </tr>
@@ -15,7 +15,7 @@
 </table>
 <hr>
 <%= link_to 'Back to tests', tests_path %>
-<% if logged_in? %>
+<% if user_signed_in? %>
   &nbsp;|&nbsp;
   <%= link_to 'Create new question', new_test_question_path(@test.id) %>
 <% end %>

@@ -3,7 +3,7 @@
   <td><%= test.questions.count %></td>
   <td><%= test_level(test) %></td>
   <td><%= test.category.title %></td>
-  <% if logged_in? %>
+  <% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_test_path(test) %></td>
     <td><%= link_to 'Delete', test_path(test),
                     method: :delete,
