@@ -11,7 +11,8 @@
     <% end %>
   </tr>
 
-  <%= render @questions %>
+  <%#= render @questions %>
+  <%=  render partial: 'questions/question', collection: @questions %>
 </table>
 <hr>
 <%= link_to 'Back to tests', tests_path %>
