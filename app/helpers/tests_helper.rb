@@ -5,8 +5,11 @@ module TestsHelper
   end
 
   def test_nav(test)
-    to_test = link_to 'Back to test', test_path(test)
-    to_all_tests = link_to 'Back to all tests', tests_path
-    to_test + ' | ' + to_all_tests
+    # FIXME fix for user/admin roles
+    # to_test = link_to 'Back to test', test_path(test)
+    # to_all_tests = link_to 'Back to all tests', tests_path
+    # to_test + ' | ' + to_all_tests
+
+    link_to 'Back to all tests', tests_path
   end
 end

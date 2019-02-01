@@ -6,15 +6,13 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
-  devise :database_authenticatable, :validatable, password_length: 3..128
-
   before_save :before_save_email_downcase
 
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authorships, class_name: 'Test', foreign_key: 'author_id', dependent: :nullify
 
-  validates :name, presence: true
+  validates :name, :surname, presence: true
   validates :email, format: { with: /.+@.+\..+/i },
                     uniqueness: true
 
