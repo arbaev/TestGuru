@@ -6,7 +6,7 @@ class TestsController < ApplicationController
 
   def index
     @tests = Test.all
-    if user_admin?
+    if current_user.try(:admin?)
       redirect_to admin_tests_path
     end
   end

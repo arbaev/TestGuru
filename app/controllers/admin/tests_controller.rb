@@ -19,7 +19,7 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.authorships.build(test_params)
 
     if @test.save
-      redirect_to @test
+      redirect_to admin_test_path(@test)
     else
       render :new
     end

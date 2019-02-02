@@ -6,8 +6,6 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
-  before_save :before_save_email_downcase
-
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authorships, class_name: 'Test', foreign_key: 'author_id', dependent: :nullify
@@ -24,9 +22,7 @@ class User < ApplicationRecord
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end
 
-  private
-
-  def before_save_email_downcase
-    self.email = email.downcase
+  def admin?
+    is_a?(Admin)
   end
 end
