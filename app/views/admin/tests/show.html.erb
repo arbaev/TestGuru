@@ -6,17 +6,13 @@
   <tr>
     <th>id</th>
     <th>Question</th>
-    <% if user_signed_in? %>
-      <th colspan="4">Actions</th>
-    <% end %>
+    <th colspan="4">Actions</th>
   </tr>
 
-  <%#= render @questions %>
-  <%=  render partial: 'questions/question', collection: @questions %>
+  <%= render @questions %>
+  <%#=  render partial: 'questions/question', collection: @questions %>
 </table>
 <hr>
-<%= link_to 'Back to tests', tests_path %>
-<% if user_signed_in? %>
-  &nbsp;|&nbsp;
-  <%= link_to 'Create new question', new_test_question_path(@test.id) %>
-<% end %>
+<%= link_to 'Back to tests', admin_tests_path %>
+&nbsp;|&nbsp;
+<%= link_to 'Create new question', new_admin_test_question_path(@test) %>

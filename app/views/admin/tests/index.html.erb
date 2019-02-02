@@ -5,8 +5,6 @@
   <%= render @tests %>
 </table>
 <hr>
-<% if user_signed_in? %>
-  <p>
-    <%= link_to 'Create new test', new_admin_test_path %>
-  </p>
-<% end %>
+<p>
+  <%= link_to 'Create new test', new_admin_test_path %>
+</p>

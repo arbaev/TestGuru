@@ -13,10 +13,6 @@ Rails.application.routes.draw do
   get 'guru', to: 'users#show'
 
   resources :tests, only: :index do
-    resources :questions, shallow: true, only: :show do
-      resources :answers, shallow: true, only: :show
-    end
-
     post :start, on: :member
   end
 
@@ -25,6 +21,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    root 'tests#index'
     resources :tests do
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index
