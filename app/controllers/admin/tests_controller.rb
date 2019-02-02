@@ -1,5 +1,5 @@
 class Admin::TestsController < Admin::BaseController
-  before_action :find_test, only: %i[show edit update destroy start]
+  before_action :find_test, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_test_not_found
 
@@ -39,12 +39,6 @@ class Admin::TestsController < Admin::BaseController
     @test.destroy!
 
     redirect_to tests_path
-  end
-
-  def start
-    current_user.tests.push(@test)
-
-    redirect_to current_user.test_passage(@test)
   end
 
   private

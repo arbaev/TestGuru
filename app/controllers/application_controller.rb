@@ -3,13 +3,9 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def after_sign_in_path_for(user)
-    flash[:success] = "Welcome back, #{user.name}!"
-
-    if user.admin?
-      admin_tests_path
-    else
-      super
+  def path_for_admin
+    if current_user.admin?
+      redirect_to admin_tests_path
     end
   end
 
