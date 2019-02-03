@@ -1,14 +1,6 @@
-<%= render 'shared/flash' %>
-
 <h1>Tests list</h1>
 
 <table>
   <%= render "test_header" %>
   <%= render @tests %>
 </table>
-<hr>
-<% if logged_in? %>
-  <p>
-    <%= link_to 'Create new test', new_test_path %>
-  </p>
-<% end %>

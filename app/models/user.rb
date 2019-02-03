@@ -1,26 +1,26 @@
 class User < ApplicationRecord
-  before_save :before_save_email_downcase
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable,
+         :confirmable
 
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authorships, class_name: 'Test', foreign_key: 'author_id', dependent: :nullify
 
-  has_secure_password
   validates :name, presence: true
-  validates :email, format: { with: /.+@.+\..+/i },
-                    uniqueness: true
 
   def tests_by_level(level)
     tests.where(level: level)
   end
 
   def test_passage(test)
-    test_passages.order(id: :desc).find_by(test_id: test.id)
+    test_passages.order(id: :desc).find_by(test: test)
   end
 
-  private
-
-  def before_save_email_downcase
-    self.email = email.downcase
+  def admin?
+    is_a?(Admin)
   end
 end

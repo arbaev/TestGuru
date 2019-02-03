@@ -1,0 +1,11 @@
+<nav class="nav-admin">
+  <div class="container">
+    <div class="topbar">
+      <%= link_to 'Admin TestGuru', admin_tests_path, class: 'logo__title' %>
+      <div class="account">
+          Welcome, guruAdmin <strong><%= link_to current_user.name, guru_path %></strong>! |
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      </div>
+    </div>
+  </div>
+</nav>
