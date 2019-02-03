@@ -5,6 +5,9 @@
       <div class="account">
         <% if user_signed_in? %>
           Welcome, guru <strong><%= link_to current_user.name, guru_path %></strong>! |
+          <% if current_user.admin? %>
+            <%= link_to 'Admin Tools', admin_tests_path %> |
+          <% end %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         <% else %>
           <%= link_to 'Login', user_session_path %> |
