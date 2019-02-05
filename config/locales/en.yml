@@ -75,15 +75,20 @@ en:
       logout: "Logout"
 
     tests:
+      alert:
+        not_found: "Test not found"
+      create:
+        notice: "Test created"
+      update:
+        notice: "Test updated"
+      destroy:
+        notice: "Test deleted"
       show:
         header_html: "Test &laquo;%{title}&raquo;"
         level: "Level"
         id: "id"
         question: "Question"
         actions: "Actions"
-        back2tests: "Back to tests"             # странное место для хелперов, а?
-        new_question: "Create new question"
-        new_test: "Create new test"
       new:
         header: "Create new test"
       index:
@@ -102,6 +107,14 @@ en:
         sure: "Are you sure?"
         btn_start: "Start"
     questions:
+      alert:
+        not_found: "Question not found"
+      create:
+        notice: "Question created"
+      update:
+        notice: "Question updated"
+      destroy:
+        notice: "Question deleted"
       show:
         back: "Back"
         edit: "Edit"
@@ -119,6 +132,14 @@ en:
         back2test: "Back to test"
 
     answers:
+      alert:
+        not_found: "Answer not found"
+      create:
+        notice: "Answer created"
+      update:
+        notice: "Answer updated"
+      destroy:
+        notice: "Answer deleted"
       show:
         header: "Question"
         answer: "Answer:"
@@ -136,7 +157,9 @@ en:
         edit: "Edit"
         delete: "Delete"
         sure: "Are you sure?"
-
+    base:
+      admin_required:
+        alert: "You are not admin"
 
   test_passages:
     show:
@@ -146,6 +169,8 @@ en:
       correct_answers: "Correct answers: %{score}"
 
   tests:
+    alert:
+      not_found: "Test not found"
     index:
       header: "Tests list"
     test_header:
@@ -155,8 +180,13 @@ en:
       category: "Category"
     test:
       btn_start: "Start"
+
   users:
     show:
       profile: "Profile"
       test_passage: "Test passage"
       test_authorship: "Test authorship"
+
+  custom_sessions:
+    create:
+      welcome: "Welcome back, %{name}!"

@@ -77,6 +77,14 @@ ru:
       logout: "Выйти"
 
     tests:
+      alert:
+        not_found: "Тест не найден"
+      create:
+        notice: "Тест создан"
+      update:
+        notice: "Тест изменён"
+      destroy:
+        notice: "Тест удалён"
       show:
         header_html: "Тест &laquo;%{title}&raquo;"
         level: "Уровень"
@@ -102,6 +110,14 @@ ru:
         btn_start: "Старт"
 
     questions:
+      alert:
+        not_found: "Вопрос не найден"
+      create:
+        notice: "Вопрос создан"
+      update:
+        notice: "Вопрос изменён"
+      destroy:
+        notice: "Вопрос удалён"
       show:
         back: "Назад"
         edit: "Изменить"
@@ -119,6 +135,14 @@ ru:
         back2test: "Назад к тесту"
 
     answers:
+      alert:
+        not_found: "Ответ не найден"
+      create:
+        notice: "Ответ создан"
+      update:
+        notice: "Ответ изменён"
+      destroy:
+        notice: "Ответ удалён"
       show:
         header: "Вопрос"
         answer: "Ответ:"
@@ -136,6 +160,9 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         sure: "Вы уверены?"
+    base:
+      admin_required:
+        alert: "Вы не администратор"
 
   test_passages:
     show:
@@ -145,6 +172,8 @@ ru:
       correct_answers: "Правильных ответов: %{score}"
 
   tests:
+    alert:
+      not_found: "Тест не найден"
     index:
       header: "Список тестов"
     test_header:
@@ -159,3 +188,7 @@ ru:
       profile: "Профиль"
       test_passage: "Пройденные тесты"
       test_authorship: "Авторские тесты"
+
+  custom_sessions:
+    create:
+      welcome: "С возвращением, %{name}!"
