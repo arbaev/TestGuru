@@ -45,6 +45,8 @@ en:
         update: "Update answer"
       test_passage:       # don't work
         show: "Next"
+    select:
+      prompt: "Select category"
 
   shared:
     errors:

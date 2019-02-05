@@ -43,6 +43,8 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Изменить ответ"
+    select:
+      prompt: "Выберите категорию"
 
   shared:
     errors:
