@@ -3,8 +3,4 @@ module TestsHelper
   def test_level(test)
     TEST_LEVELS[test.level] || :pro
   end
-
-  def test_nav(test)
-    link_to 'Back to all tests', tests_path
-  end
 end

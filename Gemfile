@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Auth
 gem 'devise', '~> 4.0'
 
+# Localization
+gem 'rails-i18n', '~> 5.1'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

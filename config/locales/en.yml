@@ -1,33 +1,145 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    admin:
+      test:
+        back2tests: "Back to tests"
+        new_question: "Create new question"
+        new_test: "Create new test"
+
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Body"
+      answer:
+        body: "Body"
+        correct: "Correct?"
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      test_passage:       # don't work
+        show: "Next"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  layouts:
+    application:
+      title: "TestGuru"
+    admin:
+      title: "Admin TestGuru"
+    header:
+      title: "TestGuru"
+      welcome: "Welcome, guru"
+      admintools: "Admin Tools"
+      login: "Login"
+      logout: "Logout"
+      signup: "Signup"
+    footer:
+      project: "TestGuru Project"
+      school: "Study project at online school Thinknetica"
+
+  admin:
+    nav:
+      title: "Admin TestGuru"
+      welcome: "Welcome, admin"
+      logout: "Logout"
+
+    tests:
+      show:
+        header_html: "Test &laquo;%{title}&raquo;"
+        level: "Level"
+        id: "id"
+        question: "Question"
+        actions: "Actions"
+        back2tests: "Back to tests"             # странное место для хелперов, а?
+        new_question: "Create new question"
+        new_test: "Create new test"
+      new:
+        header: "Create new test"
+      index:
+        header: "Tests list"
+      edit:
+        header_html: "Edit the test &laquo;%{title}&raquo;"
+      test_header:
+        title: "Title"
+        questions: "Questions"
+        level: "Level"
+        category: "Category"
+        actions: "Actions"
+      test:
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+        btn_start: "Start"
+    questions:
+      show:
+        back: "Back"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+        answers: "Answers"
+        new_answer: "Create new answer"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      nav:
+        back2tests: "Back to all tests"
+        back2test: "Back to test"
+
+    answers:
+      show:
+        header: "Question"
+        answer: "Answer:"
+        correct: "Correct?"
+      new:
+        header: "Create new answer"
+      edit:
+        header: "Edit answer"
+      nav:
+        back2tests: "Back to all tests"
+        back2test: "Back to test"
+        back2quest: "Back to question"
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+
+
+  test_passages:
+    show:
+      header: "Passing test %{title}"
+    result:
+      header: "Test '%{title}' was completed"
+      correct_answers: "Correct answers: %{score}"
+
+  tests:
+    index:
+      header: "Tests list"
+    test_header:
+      title: "Title"
+      questions: "Questions"
+      level: "Level"
+      category: "Category"
+    test:
+      btn_start: "Start"
+  users:
+    show:
+      profile: "Profile"
+      test_passage: "Test passage"
+      test_authorship: "Test authorship"

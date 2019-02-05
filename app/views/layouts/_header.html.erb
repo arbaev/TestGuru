@@ -1,17 +1,17 @@
 <header class="header">
   <div class="container">
     <div class="topbar">
-      <%= link_to 'TestGuru', root_path, class: 'logo__title' %>
+      <%= link_to t('.title'), root_path, class: 'logo__title' %>
       <div class="account">
         <% if user_signed_in? %>
-          Welcome, guru <strong><%= link_to current_user.name, guru_path %></strong>! |
+          <%= t('.welcome') %> <strong><%= link_to current_user.name, guru_path %></strong>! |
           <% if current_user.admin? %>
-            <%= link_to 'Admin Tools', admin_tests_path %> |
+            <%= link_to t('.admintools'), admin_tests_path %> |
           <% end %>
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+          <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to 'Login', user_session_path %> |
-          <%= link_to 'Signup', new_user_registration_path %>
+          <%= link_to t('.login'), user_session_path %> |
+          <%= link_to t('.signup'), new_user_registration_path %>
         <% end %>
       </div>
     </div>
