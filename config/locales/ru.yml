@@ -1,5 +1,22 @@
 ru:
   helpers:
+    test:
+      easy: "лёгкий"
+      elementary: "простой"
+      advanced: "продвинутый"
+      hard: "трудный"
+      pro: "проф"
+
+    test_passage:
+      total: "Всего вопросов: %{total}"
+      success: "Поздравляем! Ваш результат %{result}%, вы успешно прошли тест."
+      fail: "Сожалеем! Ваш результат %{result}%, вы провалили тест."
+
+    question:
+      create: "Создать"
+      edit: "Изменить"
+      qheader: "%{act} вопрос для теста «%{title}»"
+
     admin:
       test:
         back2tests: "Назад к тестам"

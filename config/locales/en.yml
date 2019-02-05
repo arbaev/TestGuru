@@ -1,5 +1,22 @@
 en:
   helpers:
+    test:
+      easy: "easy"
+      elementary: "elementary"
+      advanced: "advanced"
+      hard: "hard"
+      pro: "pro"
+
+    test_passage:
+      total: "Total questions: %{total}"
+      success: "Congratulations! Your result is %{result}%, you passed the test."
+      fail: "Sorry! Your result is %{result}%, you failed the test."
+
+    question:
+      create: "Create"
+      edit: "Edit"
+      qheader: "%{act} question for test «%{title}»"
+
     admin:
       test:
         back2tests: "Back to tests"
