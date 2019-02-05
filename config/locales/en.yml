@@ -60,6 +60,8 @@ en:
     header:
       title: "TestGuru"
       welcome: "Welcome, guru"
+      eng: "English"
+      rus: "Русский"
       admintools: "Admin Tools"
       login: "Login"
       logout: "Logout"
@@ -164,6 +166,7 @@ en:
   test_passages:
     show:
       header: "Passing test %{title}"
+      next: "Next"
     result:
       header: "Test '%{title}' was completed"
       correct_answers: "Correct answers: %{score}"

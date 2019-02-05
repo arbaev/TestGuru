@@ -43,8 +43,6 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Изменить ответ"
-      test_passage:
-        update: "Следующий"
 
   shared:
     errors:
@@ -62,6 +60,8 @@ ru:
     header:
       title: "ТестГуру"
       welcome: "Добро пожаловать, гуру"
+      eng: "English"
+      rus: "Русский"
       admintools: "Администрирование"
       login: "Войти"
       logout: "Выйти"
@@ -167,6 +167,7 @@ ru:
   test_passages:
     show:
       header: "Прохождение теста %{title}"
+      next: "Следующий"
     result:
       header: "Тест '%{title}' пройден"
       correct_answers: "Правильных ответов: %{score}"
