@@ -32,7 +32,7 @@ ru:
         body: "Вопрос"
       answer:
         body: "Ответ"
-        correct: "Верный?"
+        correct: "Правильный ответ"
     submit:
       test:
         create: "Создать тест"
@@ -53,17 +53,18 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    langs:
+      eng: "English"
+      rus: "Русский"
 
   layouts:
     application:
       title: "ТестГуру"
     admin:
       title: "Админка ТестГуру"
-    header:
+    navbar:
       title: "ТестГуру"
       welcome: "Добро пожаловать, гуру"
-      eng: "English"
-      rus: "Русский"
       admintools: "Администрирование"
       login: "Войти"
       logout: "Выйти"
@@ -73,7 +74,7 @@ ru:
       school: "Учебный проект в онлайн-школе Thinknetica"
 
   admin:
-    nav:
+    navbar:
       title: "Админка ТестГуру"
       welcome: "Привет, админ"
       logout: "Выйти"
@@ -99,7 +100,7 @@ ru:
         header: "Список тестов"
       edit:
         header_html: "Изменить тест &laquo;%{title}&raquo;"
-      test_header:
+      test_table:
         title: "Название"
         questions: "Вопросы"
         level: "Уровень"
@@ -127,6 +128,7 @@ ru:
         sure: "Вы уверены?"
         answers: "Ответы"
         new_answer: "Создать новый ответ"
+        no_answers: "Нет ответов для этого вопроса"
       question:
         show: "Показать"
         edit: "Изменить"
@@ -169,17 +171,18 @@ ru:
   test_passages:
     show:
       header: "Прохождение теста %{title}"
-      next: "Следующий"
+      next: "Следующий вопрос"
     result:
       header: "Тест '%{title}' пройден"
       correct_answers: "Правильных ответов: %{score}"
+      back2tests: "Перейти к списку тестов"
 
   tests:
     alert:
       not_found: "Тест не найден"
     index:
       header: "Список тестов"
-    test_header:
+    test_table:
       title: "Название"
       questions: "Вопросы"
       level: "Уровень"

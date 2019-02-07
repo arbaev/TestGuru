@@ -5,9 +5,9 @@ module TestPassagesHelper
 
   def result_message(result)
     if @test_passage.successful?
-      content_tag(:h2, t('helpers.test_passage.success', result: result), class: 'result_success')
+      content_tag(:h2, t('helpers.test_passage.success', result: result), class: 'text-success')
     else
-      content_tag(:h2, t('helpers.test_passage.fail', result: result), class: 'result_fail')
+      content_tag(:h2, t('helpers.test_passage.fail', result: result), class: 'text-danger')
     end
   end
 end

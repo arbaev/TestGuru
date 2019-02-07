@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark bg-info mb-3">
+  <%= link_to t('.title'), root_path, class: 'navbar-brand logo__title' %>
+
+  <div class="navbar-text">
+    <%= t('.welcome') %> <strong><%= link_to current_user.name, guru_path %></strong>! |
+    <%= link_to t('.logout'), destroy_user_session_path, method: :delete %> |
+    <%= render 'shared/langs' %>
+  </div>
+</nav>

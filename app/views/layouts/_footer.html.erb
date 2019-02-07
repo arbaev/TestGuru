@@ -1,9 +1,9 @@
-<footer class="footer">
-  &copy; <%= current_year %>
-  <%= mail_to "tim@domain.com", 'Tim Arbaev' %>.
+<footer class="footer d-flex justify-content-center text-light bg-dark mt-5">
+  &copy; <%= current_year %>&ensp;
+  <%= mail_to "tim@domain.com", 'Tim Arbaev', class: 'text-light footer_link' %>.&ensp;
   <%= link_to t('.project'), github_url('arbaev', 'testguru'),
-              target: "_blank" %> &mdash;
+              target: "_blank", class: 'text-light footer_link' %>&ensp;&mdash;&ensp;
   <%= link_to t('.school'),
               'http://thinknetica.com/',
-              target: "_blank" %>
+              target: "_blank", class: 'text-light footer_link' %>
 </footer>

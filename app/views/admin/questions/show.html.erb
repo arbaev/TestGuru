@@ -1,4 +1,4 @@
-<h1>[<%= @question.id %>] <%= @question.body %></h1>
+<h1><%= @question.body %></h1>
 
 <p>
   <%= link_to t('.back'), admin_test_path(@question.test) %> |
@@ -10,10 +10,21 @@
 
 <h2><%= t('.answers') %></h2>
 
-<ol>
-  <%= render @question.answers %>
-</ol>
-
+<% if @question.answers.present? %>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th><%= t('.question') %></th>
+      <th colspan="3"><%= t('.actions') %></th>
+    </tr>
+    </thead>
+    <tbody>
+      <%= render @question.answers %>
+    </tbody>
+  </table>
+  <% else %>
+  <p><%= t('.no_answers') %></p>
+<% end %>
 <p>
   <%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
 </p>

@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-dark mb-3">
+  <%= link_to t('.title'), root_path, class: 'navbar-brand logo__title' %>
+
+  <div class="navbar-text">
+    <% if user_signed_in? %>
+      <%= t('.welcome') %> <strong><%= link_to current_user.name, guru_path %></strong>! |
+      <% if current_user.admin? %>
+        <%= link_to t('.admintools'), admin_tests_path %> |
+      <% end %>
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %> |
+    <% else %>
+      <%= link_to t('.login'), user_session_path %> |
+      <%= link_to t('.signup'), new_user_registration_path %> |
+    <% end %>
+
+    <%= render 'shared/langs' %>
+  </div>
+</nav>
