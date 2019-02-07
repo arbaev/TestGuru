@@ -1,8 +1,5 @@
 <h1><%= t('.header') %></h1>
 
-<table>
-  <%= render "test_header" %>
-  <%= render @tests %>
-</table>
+<%= render partial: 'admin/tests/test_table', locals: { test: @tests } %>
 <hr>
 <%= link_new_test %>

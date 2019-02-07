@@ -2,14 +2,17 @@
 
 <p><%= t('.level') %>: <strong><%= test_level(@test) %> (<%= @test.level %>)</strong></p>
 
-<table>
+<table class="table">
+  <thead class="thead-light">
   <tr>
-    <th><%= t('.id') %></th>
     <th><%= t('.question') %></th>
+    <th><%= t('.answers') %></th>
     <th colspan="4"><%= t('.actions') %></th>
   </tr>
-
-  <%= render @questions %>
+  </thead>
+  <tbody>
+    <%= render @questions %>
+  </tbody>
 </table>
 <hr>
 <%= link_to_tests %> | <%= link_new_question %>

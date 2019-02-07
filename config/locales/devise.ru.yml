@@ -101,13 +101,18 @@ ru:
         cancel_my_account: Удалить учетную запись
         currently_waiting_confirmation_for_email: 'Ожидается подтверждение адреса E-mail: %{email}'
         leave_blank_if_you_don_t_want_to_change_it: оставьте поле пустым, если не хотите его менять
-        title: Редактировать %{resource}
+        title: Редактировать аккаунт %{resource}
         unhappy: Разочарованы
         update: Обновить
         we_need_your_current_password_to_confirm_your_changes: введите текущий пароль для подтверждения изменений
       new:
         sign_up: Регистрация
         header: "Стать Гуру"
+        placeholder_email: "Ваш email"
+        placeholder_password: "Придумайте пароль"
+        placeholder_password_confirmation: "Повторите пароль"
+        placeholder_name: "Ваше имя"
+        placeholder_surname: "Ваша фамилия"
       signed_up: Добро пожаловать! Вы успешно зарегистрировались.
       signed_up_but_inactive: Вы успешно зарегистрированы. Однако, вы не можете войти в систему, потому что ваша учетная запись не активирована.
       signed_up_but_locked: Вы успешно зарегистрированы. Однако, вы не можете войти в систему, потому что ваша учетная запись заблокирована.
@@ -119,6 +124,8 @@ ru:
       new:
         header: "Вход в ТестГуру"
         sign_in: Войти
+        placeholder_email: "Ваш email"
+        placeholder_password: "Ваш пароль"
       signed_in: Вход в систему выполнен.
       signed_out: Выход из системы выполнен.
     shared:

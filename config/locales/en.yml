@@ -32,7 +32,7 @@ en:
         body: "Body"
       answer:
         body: "Body"
-        correct: "Correct?"
+        correct: "Correct answer"
     submit:
       test:
         create: "Create test"
@@ -43,7 +43,7 @@ en:
       answer:
         create: "Create answer"
         update: "Update answer"
-      test_passage:       # don't work
+      test_passage:
         show: "Next"
     select:
       prompt: "Select category"
@@ -53,17 +53,18 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    langs:
+      eng: "English"
+      rus: "Русский"
 
   layouts:
     application:
       title: "TestGuru"
     admin:
       title: "Admin TestGuru"
-    header:
+    navbar:
       title: "TestGuru"
       welcome: "Welcome, guru"
-      eng: "English"
-      rus: "Русский"
       admintools: "Admin Tools"
       login: "Login"
       logout: "Logout"
@@ -73,7 +74,7 @@ en:
       school: "Study project at online school Thinknetica"
 
   admin:
-    nav:
+    navbar:
       title: "Admin TestGuru"
       welcome: "Welcome, admin"
       logout: "Logout"
@@ -90,7 +91,7 @@ en:
       show:
         header_html: "Test &laquo;%{title}&raquo;"
         level: "Level"
-        id: "id"
+        answers: "Answers"
         question: "Question"
         actions: "Actions"
       new:
@@ -99,7 +100,7 @@ en:
         header: "Tests list"
       edit:
         header_html: "Edit the test &laquo;%{title}&raquo;"
-      test_header:
+      test_table:
         title: "Title"
         questions: "Questions"
         level: "Level"
@@ -126,6 +127,7 @@ en:
         sure: "Are you sure?"
         answers: "Answers"
         new_answer: "Create new answer"
+        no_answers: "No answers for this questions"
       question:
         show: "Show"
         edit: "Edit"
@@ -168,17 +170,18 @@ en:
   test_passages:
     show:
       header: "Passing test %{title}"
-      next: "Next"
+      next: "Next question"
     result:
       header: "Test '%{title}' was completed"
       correct_answers: "Correct answers: %{score}"
+      back2tests: "Go to tests list"
 
   tests:
     alert:
       not_found: "Test not found"
     index:
       header: "Tests list"
-    test_header:
+    test_table:
       title: "Title"
       questions: "Questions"
       level: "Level"

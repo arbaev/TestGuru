@@ -7,18 +7,12 @@
 
 <h2><%= t('.test_passage') %></h2>
 
-<table>
-  <%= render "tests/test_header" %>
-  <%= render current_user.tests %>
-</table>
+<%= render partial: 'tests/test_table', locals: { test: current_user.tests } %>
+
 <hr>
 
 <h2><%= t('.test_authorship') %></h2>
 
-<table>
-  <%= render "tests/test_header" %>
-  <%= render current_user.authorships %>
-</table>
-<hr>
+<%= render partial: 'tests/test_table', locals: { test: current_user.authorships } %>
 
 
