@@ -91,7 +91,7 @@ en:
       show:
         header_html: "Test &laquo;%{title}&raquo;"
         level: "Level"
-        id: "id"
+        answers: "Answers"
         question: "Question"
         actions: "Actions"
       new:

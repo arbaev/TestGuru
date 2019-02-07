@@ -91,7 +91,7 @@ ru:
       show:
         header_html: "Тест &laquo;%{title}&raquo;"
         level: "Уровень"
-        id: "id"
+        answers: "Ответов"
         question: "Вопрос"
         actions: "Действия"
       new:
