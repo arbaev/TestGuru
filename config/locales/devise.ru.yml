@@ -108,6 +108,11 @@ ru:
       new:
         sign_up: Регистрация
         header: "Стать Гуру"
+        placeholder_email: "Ваш email"
+        placeholder_password: "Придумайте пароль"
+        placeholder_password_confirmation: "Повторите пароль"
+        placeholder_name: "Ваше имя"
+        placeholder_surname: "Ваша фамилия"
       signed_up: Добро пожаловать! Вы успешно зарегистрировались.
       signed_up_but_inactive: Вы успешно зарегистрированы. Однако, вы не можете войти в систему, потому что ваша учетная запись не активирована.
       signed_up_but_locked: Вы успешно зарегистрированы. Однако, вы не можете войти в систему, потому что ваша учетная запись заблокирована.
@@ -119,6 +124,8 @@ ru:
       new:
         header: "Вход в ТестГуру"
         sign_in: Войти
+        placeholder_email: "Ваш email"
+        placeholder_password: "Ваш пароль"
       signed_in: Вход в систему выполнен.
       signed_out: Выход из системы выполнен.
     shared:

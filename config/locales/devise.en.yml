@@ -106,6 +106,11 @@ en:
       new:
         header: "Become a Guru"
         sign_up: Sign up
+        placeholder_email: "Your email"
+        placeholder_password: "Create a password"
+        placeholder_password_confirmation: "Repeat password"
+        placeholder_name: "Your name"
+        placeholder_surname: "Your last name"
       signed_up: Welcome! You have signed up successfully.
       signed_up_but_inactive: You have signed up successfully. However, we could not sign you in because your account is not yet activated.
       signed_up_but_locked: You have signed up successfully. However, we could not sign you in because your account is locked.
@@ -117,6 +122,8 @@ en:
       new:
         header: "Login to TestGuru"
         sign_in: Log in
+        placeholder_email: "Your email"
+        placeholder_password: "Your password"
       signed_in: Signed in successfully.
       signed_out: Signed out successfully.
     shared:
