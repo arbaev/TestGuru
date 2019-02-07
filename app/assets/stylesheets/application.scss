@@ -1,18 +1,4 @@
 @import "bootstrap";
-
-body {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-  min-height: 100vh; // for sticky footer
-}
-
-label {
-  margin-bottom: 0.1rem;
-}
-
-//for flash[:notice] messages
-.alert-notice {
-  @extend .alert-primary
-}
+@import "navbar";
+@import "main";
+@import "footer";
