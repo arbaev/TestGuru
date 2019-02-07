@@ -2,6 +2,8 @@ class Admin::AnswersController < Admin::BaseController
   before_action :find_question, only: %i[new create]
   before_action :find_answer, only: %i[show edit update destroy]
 
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_answer_not_found
+
   def show; end
 
   def new
@@ -12,7 +14,7 @@ class Admin::AnswersController < Admin::BaseController
     @answer = @question.answers.new(answer_params)
 
     if @answer.save
-      redirect_to admin_answer_path(@answer)
+      redirect_to admin_answer_path(@answer), notice: t('.notice')
     else
       render :new
     end
@@ -20,7 +22,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def update
     if @answer.update(answer_params)
-      redirect_to admin_answer_path(@answer)
+      redirect_to admin_answer_path(@answer), notice: t('.notice')
     else
       render :edit
     end
@@ -28,7 +30,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def destroy
     @answer.destroy
-    redirect_to admin_question_path(@answer.question)
+    redirect_to admin_question_path(@answer.question), notice: t('.notice')
   end
 
   private
@@ -43,5 +45,9 @@ class Admin::AnswersController < Admin::BaseController
 
   def answer_params
     params.require(:answer).permit(:body, :correct)
+  end
+
+  def rescue_from_answer_not_found
+    redirect_to admin_tests_path, alert: t('.alert.not_found')
   end
 end

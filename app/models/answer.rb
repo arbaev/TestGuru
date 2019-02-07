@@ -12,7 +12,7 @@ class Answer < ApplicationRecord
 
   def validate_answers_quantity
     if question.answers.count >= MAX_ANSWERS
-      errors.add(:answers_quantity, "Should be #{MAX_ANSWERS} answers max.")
+      errors.add(:answers_quantity, I18n.t('activerecord.errors.messages.max_answers', max: MAX_ANSWERS))
     end
   end
 end

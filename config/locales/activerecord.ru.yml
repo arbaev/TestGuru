@@ -1,0 +1,6 @@
+ru:
+  activerecord:
+    errors:
+      messages:
+        blank: "не может быть пустым"
+        max_answers: "Допускается %{max} ответа максимум."

@@ -1,12 +1,9 @@
-<h1><%= @test_passage.test.title %> was completed!</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p><%= total_questions_helper %></p>
 
 <p>
-  Correct answers: <%= @test_passage.score %>
+  <%= t('.correct_answers', score: @test_passage.score) %>
 </p>
 
 <%= result_message(@test_passage.result_percentage) %>
-
-<hr>
-<%= test_nav(@test_passage.test) %>

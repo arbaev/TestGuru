@@ -1,4 +1,4 @@
-<h1>Passing test <%= @test_passage.test.title %></h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <p><%= total_questions_helper %></p>
 
 <h2>
@@ -15,8 +15,5 @@
       <%= b.label %>
     </p>
   <% end %>
-  <%= form.submit 'Next' %>
+  <%= form.submit t('.next') %>
 <% end %>
-
-<hr>
-<%= test_nav(@test_passage.test) %>

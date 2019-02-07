@@ -1,33 +1,197 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 ru:
-  hello: "Привет, мир"
+  helpers:
+    test:
+      easy: "лёгкий"
+      elementary: "простой"
+      advanced: "продвинутый"
+      hard: "трудный"
+      pro: "проф"
+
+    test_passage:
+      total: "Всего вопросов: %{total}"
+      success: "Поздравляем! Ваш результат %{result}%, вы успешно прошли тест."
+      fail: "Сожалеем! Ваш результат %{result}%, вы провалили тест."
+
+    question:
+      create: "Создать"
+      edit: "Изменить"
+      qheader: "%{act} вопрос для теста «%{title}»"
+
+    admin:
+      test:
+        back2tests: "Назад к тестам"
+        new_question: "Создать новый вопрос"
+        new_test: "Создать новый тест"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Вопрос"
+      answer:
+        body: "Ответ"
+        correct: "Верный?"
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Сохранить изменения"
+      question:
+        create: "Создать вопрос"
+        update: "Изменить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Изменить ответ"
+    select:
+      prompt: "Выберите категорию"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  layouts:
+    application:
+      title: "ТестГуру"
+    admin:
+      title: "Админка ТестГуру"
+    header:
+      title: "ТестГуру"
+      welcome: "Добро пожаловать, гуру"
+      eng: "English"
+      rus: "Русский"
+      admintools: "Администрирование"
+      login: "Войти"
+      logout: "Выйти"
+      signup: "Зарегистрироваться"
+    footer:
+      project: "Проект TestGuru"
+      school: "Учебный проект в онлайн-школе Thinknetica"
+
+  admin:
+    nav:
+      title: "Админка ТестГуру"
+      welcome: "Привет, админ"
+      logout: "Выйти"
+
+    tests:
+      alert:
+        not_found: "Тест не найден"
+      create:
+        notice: "Тест создан"
+      update:
+        notice: "Тест изменён"
+      destroy:
+        notice: "Тест удалён"
+      show:
+        header_html: "Тест &laquo;%{title}&raquo;"
+        level: "Уровень"
+        id: "id"
+        question: "Вопрос"
+        actions: "Действия"
+      new:
+        header: "Создать новый тест"
+      index:
+        header: "Список тестов"
+      edit:
+        header_html: "Изменить тест &laquo;%{title}&raquo;"
+      test_header:
+        title: "Название"
+        questions: "Вопросы"
+        level: "Уровень"
+        category: "Категория"
+        actions: "Действия"
+      test:
+        edit: "Изменить"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+        btn_start: "Старт"
+
+    questions:
+      alert:
+        not_found: "Вопрос не найден"
+      create:
+        notice: "Вопрос создан"
+      update:
+        notice: "Вопрос изменён"
+      destroy:
+        notice: "Вопрос удалён"
+      show:
+        back: "Назад"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+        answers: "Ответы"
+        new_answer: "Создать новый ответ"
+      question:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      nav:
+        back2tests: "Назад ко всем тестам"
+        back2test: "Назад к тесту"
+
+    answers:
+      alert:
+        not_found: "Ответ не найден"
+      create:
+        notice: "Ответ создан"
+      update:
+        notice: "Ответ изменён"
+      destroy:
+        notice: "Ответ удалён"
+      show:
+        header: "Вопрос"
+        answer: "Ответ:"
+        correct: "Верный?"
+      new:
+        header: "Создать новый ответ"
+      edit:
+        header: "Изменить ответ"
+      nav:
+        back2tests: "Назад ко всем тестам"
+        back2test: "Назад к тесту"
+        back2quest: "Назад к вопросу"
+      answer:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+    base:
+      admin_required:
+        alert: "Вы не администратор"
+
+  test_passages:
+    show:
+      header: "Прохождение теста %{title}"
+      next: "Следующий"
+    result:
+      header: "Тест '%{title}' пройден"
+      correct_answers: "Правильных ответов: %{score}"
+
+  tests:
+    alert:
+      not_found: "Тест не найден"
+    index:
+      header: "Список тестов"
+    test_header:
+      title: "Название"
+      questions: "Вопросы"
+      level: "Уровень"
+      category: "Категория"
+    test:
+      btn_start: "Старт"
+  users:
+    show:
+      profile: "Профиль"
+      test_passage: "Пройденные тесты"
+      test_authorship: "Авторские тесты"
+
+  custom_sessions:
+    create:
+      welcome: "С возвращением, %{name}!"

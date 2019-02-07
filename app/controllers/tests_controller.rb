@@ -21,6 +21,6 @@ class TestsController < ApplicationController
   end
 
   def rescue_from_test_not_found
-    render plain: 'Test not found'
+    redirect_to tests_path, alert: t('.alert.not_found')
   end
 end

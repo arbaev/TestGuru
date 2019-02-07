@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    errors:
+      messages:
+        blank: "can't be blank"
+        max_answers: "Should be %{max} answers max."

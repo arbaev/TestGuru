@@ -19,7 +19,7 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.authorships.build(test_params)
 
     if @test.save
-      redirect_to admin_test_path(@test)
+      redirect_to admin_test_path(@test), notice: t('.notice')
     else
       render :new
     end
@@ -29,7 +29,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to tests_path
+      redirect_to admin_tests_path, notice: t('.notice')
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class Admin::TestsController < Admin::BaseController
   def destroy
     @test.destroy!
 
-    redirect_to tests_path
+    redirect_to admin_tests_path, notice: t('.notice')
   end
 
   private
@@ -52,6 +52,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def rescue_from_test_not_found
-    render plain: 'Test not found'
+    redirect_to admin_tests_path, alert: t('.alert.not_found')
   end
 end
