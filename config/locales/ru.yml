@@ -164,6 +164,15 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         sure: "Вы уверены?"
+
+    gists:
+      index:
+        header: "Список гистов"
+        gist_question: "Вопрос"
+        gist_url: "Адрес гиста"
+        gist_user: "Кем создан"
+        gist_created_at: "Когда оздан"
+
     base:
       admin_required:
         alert: "Вы не администратор"

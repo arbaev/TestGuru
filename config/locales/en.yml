@@ -163,6 +163,15 @@ en:
         edit: "Edit"
         delete: "Delete"
         sure: "Are you sure?"
+
+    gists:
+      index:
+        header: "Gists list"
+        gist_question: "Question"
+        gist_url: "Gist url"
+        gist_user: "User email"
+        gist_created_at: "Created at"
+
     base:
       admin_required:
         alert: "You are not admin"
