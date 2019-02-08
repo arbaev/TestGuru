@@ -176,7 +176,7 @@ en:
       correct_answers: "Correct answers: %{score}"
       back2tests: "Go to tests list"
     gist:
-      success: "Gist was succesfully saved"
+      success_html: "Gist was successfully saved: <a href=%{url} target=_blank>show at Github</a>"
       fail: "Error: gist wasn't saved"
 
   tests:

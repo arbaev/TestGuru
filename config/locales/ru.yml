@@ -177,7 +177,7 @@ ru:
       correct_answers: "Правильных ответов: %{score}"
       back2tests: "Перейти к списку тестов"
     gist:
-      success: "Гист успешно сохранён"
+      success_html: "Гист успешно сохранён: <a href=%{url} target=_blank>посмотреть на Github</a>"
       fail: "Ошибка, сохранение гиста не удалось"
 
   tests:
