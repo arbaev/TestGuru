@@ -176,6 +176,9 @@ ru:
       header: "Тест '%{title}' пройден"
       correct_answers: "Правильных ответов: %{score}"
       back2tests: "Перейти к списку тестов"
+    gist:
+      success: "Гист успешно сохранён"
+      fail: "Ошибка, сохранение гиста не удалось"
 
   tests:
     alert:

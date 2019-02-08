@@ -175,6 +175,9 @@ en:
       header: "Test '%{title}' was completed"
       correct_answers: "Correct answers: %{score}"
       back2tests: "Go to tests list"
+    gist:
+      success: "Gist was succesfully saved"
+      fail: "Error: gist wasn't saved"
 
   tests:
     alert:
