@@ -172,6 +172,7 @@ ru:
     show:
       header: "Прохождение теста %{title}"
       next: "Следующий вопрос"
+      create_gist: "Отправить вопрос в Гист"
     result:
       header: "Тест '%{title}' пройден"
       correct_answers: "Правильных ответов: %{score}"
@@ -192,6 +193,7 @@ ru:
       category: "Категория"
     test:
       btn_start: "Старт"
+
   users:
     show:
       profile: "Профиль"
@@ -201,3 +203,6 @@ ru:
   custom_sessions:
     create:
       welcome: "С возвращением, %{name}!"
+
+  gist_question_service:
+    gist_description: "Вопрос из теста %{title} от ТестГуру"
