@@ -18,10 +18,11 @@ en:
       qheader: "%{act} question for test «%{title}»"
 
     admin:
-      test:
+      navigation:
         back2tests: "Back to tests"
         new_question: "Create new question"
         new_test: "Create new test"
+        gists: "Gists list"
 
     label:
       test:

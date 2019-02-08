@@ -18,10 +18,11 @@ ru:
       qheader: "%{act} вопрос для теста «%{title}»"
 
     admin:
-      test:
+      navigation:
         back2tests: "Назад к тестам"
         new_question: "Создать новый вопрос"
         new_test: "Создать новый тест"
+        gists: "Список гистов"
 
     label:
       test:
