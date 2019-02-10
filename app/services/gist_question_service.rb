@@ -9,7 +9,7 @@ class GistQuestionService
   end
 
   def success?
-    !!post.node_id
+    url.present?
   end
 
   def url

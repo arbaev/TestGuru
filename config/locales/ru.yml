@@ -172,7 +172,7 @@ ru:
         gist_question: "Вопрос"
         gist_url: "Адрес гиста"
         gist_user: "Кем создан"
-        gist_created_at: "Когда оздан"
+        gist_created_at: "Когда создан"
 
     base:
       admin_required:
