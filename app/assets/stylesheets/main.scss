@@ -10,7 +10,10 @@ label {
   margin-bottom: 0.1rem;
 }
 
-//for flash[:notice] messages
+//for flash messages
 .alert-notice {
   @extend .alert-primary
+}
+.alert-alert {
+  @extend .alert-danger
 }

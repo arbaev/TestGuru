@@ -18,10 +18,11 @@ en:
       qheader: "%{act} question for test «%{title}»"
 
     admin:
-      test:
+      navigation:
         back2tests: "Back to tests"
         new_question: "Create new question"
         new_test: "Create new test"
+        gists: "Gists list"
 
     label:
       test:
@@ -163,6 +164,15 @@ en:
         edit: "Edit"
         delete: "Delete"
         sure: "Are you sure?"
+
+    gists:
+      index:
+        header: "Gists list"
+        gist_question: "Question"
+        gist_url: "Gist url"
+        gist_user: "User email"
+        gist_created_at: "Created at"
+
     base:
       admin_required:
         alert: "You are not admin"
@@ -171,10 +181,14 @@ en:
     show:
       header: "Passing test %{title}"
       next: "Next question"
+      create_gist: "Send question to Gist"
     result:
       header: "Test '%{title}' was completed"
       correct_answers: "Correct answers: %{score}"
       back2tests: "Go to tests list"
+    gist:
+      success_html: "Gist was successfully saved: <a href=%{url} target=_blank>show at Github</a>"
+      fail: "Error: gist wasn't saved"
 
   tests:
     alert:
@@ -198,3 +212,7 @@ en:
   custom_sessions:
     create:
       welcome: "Welcome back, %{name}!"
+
+  services:
+    gist_question_service:
+      gist_description: "A question about %{title} from TestGuru"
