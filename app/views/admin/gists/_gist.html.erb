@@ -1,6 +1,6 @@
 <tr>
-  <td><%= link_to gist.truncated(gist.question.body), admin_question_path(gist.question) %></td>
+  <td><%= link_to truncated(gist.question.body), admin_question_path(gist.question) %></td>
   <td><%= link_to gist.gist_id, "#{Gist::GITHUB_GIST_URL}#{gist.gist_id}", target: "_blank" %></td>
   <td><%= gist.user.email %></td>
-  <td><%= gist.created_at.strftime("%F %T") %></td>
+  <td><%= l(gist.created_at, format: :long) %></td>
 </tr>

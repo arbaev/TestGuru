@@ -26,6 +26,6 @@ Rails.application.routes.draw do
       end
     end
 
-    get 'gists', to: 'gists#index'
+    resources :gists, only: :index
   end
 end
