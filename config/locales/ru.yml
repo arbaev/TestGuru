@@ -214,5 +214,6 @@ ru:
     create:
       welcome: "С возвращением, %{name}!"
 
-  gist_question_service:
-    gist_description: "Вопрос из теста %{title} от ТестГуру"
+  services:
+    gist_question_service:
+      gist_description: "Вопрос из теста %{title} от ТестГуру"

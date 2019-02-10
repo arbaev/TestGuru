@@ -1,19 +1,30 @@
 class GistQuestionService
+  attr_reader :post, :question
+
   def initialize(question, client = default_client)
     @question = question
     @test = @question.test
     @client = client
+    @post = create_gist
   end
 
-  def call
-    @client.create_gist(gist_params)
+  def success?
+    !!post.node_id
+  end
+
+  def url
+    post.html_url
   end
 
   private
 
+  def create_gist
+    @client.create_gist(gist_params)
+  end
+
   def gist_params
     {
-      description: I18n.t('.gist_question_service.gist_description', title: @test.title),
+      description: I18n.t('services.gist_question_service.gist_description', title: @test.title),
       files: {
         'testguru-question.txt' => {
            content: gist_content

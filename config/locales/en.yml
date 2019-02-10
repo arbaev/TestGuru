@@ -213,5 +213,6 @@ en:
     create:
       welcome: "Welcome back, %{name}!"
 
-  gist_question_service:
-    gist_description: "A question about %{title} from TestGuru"
+  services:
+    gist_question_service:
+      gist_description: "A question about %{title} from TestGuru"
