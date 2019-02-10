@@ -13,12 +13,12 @@ class GistQuestionService
 
   def gist_params
     {
-        description: I18n.t('.gist_question_service.gist_description', title: @test.title),
-        files: {
-            'testguru-question.txt' => {
-                content: gist_content
-            }
+      description: I18n.t('.gist_question_service.gist_description', title: @test.title),
+      files: {
+        'testguru-question.txt' => {
+           content: gist_content
         }
+      }
     }
   end
 
