@@ -17,3 +17,10 @@ label {
 .alert-alert {
   @extend .alert-danger
 }
+
+// for sorting tables
+.table-header {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
