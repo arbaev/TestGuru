@@ -17,9 +17,9 @@ function sortColumn() {
 
     sortedRows = [].map.call(trs, tr => { return tr });
 
-    sortedRows.sort(compareRows)
+    sortedRows.sort(compareRows);
 
-    replaceTbody(tbody, sortedRows)
+    replaceTbody(tbody, sortedRows);
 }
 
 function compareRows(row1, row2) {
@@ -39,11 +39,11 @@ function replaceTbody(tbody, rows) {
     sortedTbody = document.createElement('tbody');
 
     if (tbody.classList.contains('asc')) {
-        rows.reverse()
+        rows.reverse();
     } else {
-        sortedTbody.classList.add('asc')
+        sortedTbody.classList.add('asc');
     }
 
-    rows.map(function (tr) { sortedTbody.appendChild(tr) })
-    tbody.parentNode.replaceChild(sortedTbody, tbody)
+    rows.map(function (tr) { sortedTbody.appendChild(tr) });
+    tbody.parentNode.replaceChild(sortedTbody, tbody);
 }
