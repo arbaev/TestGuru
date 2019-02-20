@@ -1,6 +1,19 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <p><%= total_questions_helper %></p>
 
+<div class="progress">
+  <%= content_tag :div,
+                  class: "progress-bar",
+                  data: { total: @test_passage.test.total_questions,
+                          current: @test_passage.question_number },
+                  role: "progressbar",
+                  style: "width: 0%;",
+                  'aria-valuenow' => "0",
+                  'aria-valuemin' => "0",
+                  'aria-valuemax' => "100" do %>
+  <% end %>
+</div>
+
 <h2>
   <%= @test_passage.question_number %>. <%= @test_passage.current_question.body %>
 </h2>
