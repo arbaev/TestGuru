@@ -87,6 +87,8 @@ en:
         notice: "Test created"
       update:
         notice: "Test updated"
+      update_inline_form:
+        notice: "Test title updated"
       destroy:
         notice: "Test deleted"
       show:
@@ -112,6 +114,9 @@ en:
         delete: "Delete"
         sure: "Are you sure?"
         btn_start: "Start"
+      form_inline_title:
+        submit: "Ok"
+
     questions:
       alert:
         not_found: "Question not found"

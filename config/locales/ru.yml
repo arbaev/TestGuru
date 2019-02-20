@@ -87,6 +87,8 @@ ru:
         notice: "Тест создан"
       update:
         notice: "Тест изменён"
+      update_inline_form:
+        notice: "Название теста изменёно"
       destroy:
         notice: "Тест удалён"
       show:
@@ -112,6 +114,8 @@ ru:
         delete: "Удалить"
         sure: "Вы уверены?"
         btn_start: "Старт"
+      form_inline_title:
+        submit: "Ok"
 
     questions:
       alert:

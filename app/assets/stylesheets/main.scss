@@ -10,6 +10,10 @@ label {
   margin-bottom: 0.1rem;
 }
 
+.hide {
+  display: none;
+}
+
 //for flash messages
 .alert-notice {
   @extend .alert-primary
