@@ -9,7 +9,7 @@ document.addEventListener('turbolinks:load', function () {
     var error = document.querySelector('.resource-errors')
 
     if (error) {
-        var resourceId = errors.dataset.resourceId
+        var resourceId = error.dataset.resourceId
         formInlineHandler(resourceId)
     }
 });
@@ -25,14 +25,16 @@ function formInlineHandler(testId) {
     var link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]');
     var testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]');
     var formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]');
+    var textEdit = document.querySelector('.form-inline-link[data-text-edit]').dataset.textEdit;
+    var textCancel = document.querySelector('.form-inline-link[data-text-cancel]').dataset.textCancel;
 
     if (formInline.classList.contains('hide')) {
         testTitle.classList.add('hide')
         formInline.classList.remove('hide')
-        link.textContent = 'Cancel'
+        link.textContent = textCancel
     } else {
         testTitle.classList.remove('hide')
         formInline.classList.add('hide')
-        link.textContent = 'Edit'
+        link.textContent = textEdit
     }
 }

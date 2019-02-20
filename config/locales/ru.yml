@@ -111,6 +111,7 @@ ru:
         actions: "Действия"
       test:
         edit: "Изменить"
+        cancel: "Отмена"
         delete: "Удалить"
         sure: "Вы уверены?"
         btn_start: "Старт"
