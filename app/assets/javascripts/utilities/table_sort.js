@@ -15,7 +15,7 @@ function sortColumn() {
     trs = tbody.querySelectorAll('tr');
     window.index = this.cellIndex;
 
-    sortedRows = [].map.call(trs, tr => { return tr });
+    sortedRows = [].map.call(trs, function (tr) { return tr });
 
     sortedRows.sort(compareRows);
 
