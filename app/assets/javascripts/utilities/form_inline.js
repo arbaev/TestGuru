@@ -1,0 +1,41 @@
+document.addEventListener('turbolinks:load', function () {
+    let controls = document.querySelectorAll('.form-inline-link');
+
+    if (controls.length) {
+        controls.forEach(function (item) {
+            item.addEventListener('click', formInlineLinkHandler);
+        })
+
+        let error = document.querySelector('.resource-errors');
+
+        if (error) {
+            let resourceId = error.dataset.resourceId;
+            formInlineHandler(resourceId);
+        }
+    }
+});
+
+function formInlineLinkHandler(event) {
+    event.preventDefault();
+
+    let testId = this.dataset.testId;
+    formInlineHandler(testId);
+}
+
+function formInlineHandler(testId) {
+    let link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]'),
+        testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]'),
+        formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]'),
+        textEdit = document.querySelector('.form-inline-link[data-text-edit]').dataset.textEdit,
+        textCancel = document.querySelector('.form-inline-link[data-text-cancel]').dataset.textCancel;
+
+    if (formInline.classList.contains('hide')) {
+        testTitle.classList.add('hide');
+        formInline.classList.remove('hide');
+        link.textContent = textCancel;
+    } else {
+        testTitle.classList.remove('hide');
+        formInline.classList.add('hide');
+        link.textContent = textEdit;
+    }
+}

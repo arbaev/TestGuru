@@ -3,4 +3,6 @@
 
 <h1><%= t('.header') %></h1>
 
+<%= render 'shared/errors', resource: @test %>
+
 <%= render partial: 'admin/tests/test_table', locals: { test: @tests } %>
