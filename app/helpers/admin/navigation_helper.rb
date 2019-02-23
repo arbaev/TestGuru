@@ -14,5 +14,4 @@ module Admin::NavigationHelper
   def link_to_gists
     link_to t('helpers.admin.navigation.gists'), admin_gists_path
   end
-
 end
