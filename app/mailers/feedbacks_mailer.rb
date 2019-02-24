@@ -1,8 +1,10 @@
 class FeedbacksMailer < ApplicationMailer
+  default to: :admin_email
+
   def new_feedback(feedback)
     @feedback = feedback
 
-    mail to: admin_email, subject: "Testguru feedback message from #{@feedback.name}"
+    mail subject: "Testguru feedback message from #{@feedback.name}"
   end
 
   private
