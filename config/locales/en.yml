@@ -24,6 +24,9 @@ en:
         new_test: "Create new test"
         gists: "Gists list"
 
+    application:
+      to_root: "To main page"
+
     label:
       test:
         title: "Title"
@@ -34,6 +37,10 @@ en:
       answer:
         body: "Body"
         correct: "Correct answer"
+      feedback:
+        name: "Name"
+        email: "Email"
+        message: "Message"
     submit:
       test:
         create: "Create test"
@@ -46,6 +53,14 @@ en:
         update: "Update answer"
       test_passage:
         show: "Next"
+      feedback:
+        create: "Send message"
+    placeholder:
+      feedback:
+        name: "Your name"
+        email: "Your email"
+        message: "Write the message"
+
     select:
       prompt: "Select category"
 
@@ -182,6 +197,13 @@ en:
     base:
       admin_required:
         alert: "You are not admin"
+
+  feedbacks:
+    new:
+      header: "Send feedback to administration"
+    create:
+      notice: "We have received your message."
+      alert: "There was an error sending your message. Please try again."
 
   test_passages:
     show:

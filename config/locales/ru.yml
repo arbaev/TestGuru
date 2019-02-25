@@ -24,6 +24,9 @@ ru:
         new_test: "Создать новый тест"
         gists: "Список гистов"
 
+    application:
+      to_root: "На главную"
+
     label:
       test:
         title: "Название"
@@ -34,6 +37,10 @@ ru:
       answer:
         body: "Ответ"
         correct: "Правильный ответ"
+      feedback:
+        name: "Имя"
+        email: "Email"
+        message: "Сообщение"
     submit:
       test:
         create: "Создать тест"
@@ -44,6 +51,14 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Изменить ответ"
+      feedback:
+        create: "Отправить сообщение"
+    placeholder:
+      feedback:
+        name: "Ваше имя"
+        email: "Ваш email"
+        message: "Напишите сообщение"
+
     select:
       prompt: "Выберите категорию"
 
@@ -182,6 +197,12 @@ ru:
     base:
       admin_required:
         alert: "Вы не администратор"
+
+  feedbacks:
+    new:
+      header: "Отправить отзыв администрации"
+    notice: "Мы получили ваше сообщение."
+    alert: "Произошла ошибка при отправке сообщения. Попробуйте ещё раз, пожалуйста."
 
   test_passages:
     show:

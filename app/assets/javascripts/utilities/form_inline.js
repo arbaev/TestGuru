@@ -1,15 +1,15 @@
 document.addEventListener('turbolinks:load', function () {
-    let controls = document.querySelectorAll('.form-inline-link');
+    var controls = document.querySelectorAll(".form-inline-link");
 
     if (controls.length) {
         controls.forEach(function (item) {
             item.addEventListener('click', formInlineLinkHandler);
-        })
+        });
 
-        let error = document.querySelector('.resource-errors');
+        var error = document.querySelector('.resource-errors');
 
         if (error) {
-            let resourceId = error.dataset.resourceId;
+            var resourceId = error.dataset.resourceId;
             formInlineHandler(resourceId);
         }
     }
@@ -18,12 +18,12 @@ document.addEventListener('turbolinks:load', function () {
 function formInlineLinkHandler(event) {
     event.preventDefault();
 
-    let testId = this.dataset.testId;
+    var testId = this.dataset.testId;
     formInlineHandler(testId);
 }
 
 function formInlineHandler(testId) {
-    let link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]'),
+    var link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]'),
         testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]'),
         formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]'),
         textEdit = document.querySelector('.form-inline-link[data-text-edit]').dataset.textEdit,

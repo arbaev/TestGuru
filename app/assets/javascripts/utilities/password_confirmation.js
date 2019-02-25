@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function () {
-    let password = document.querySelector('#user_password'),
+    var password = document.querySelector('#user_password'),
         password_confirm = document.querySelector('#user_password_confirmation');
 
     if (password && password_confirm) {
