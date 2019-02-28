@@ -198,6 +198,8 @@ ru:
       first_try: "c первой попытки"
       all_category: "категорию"
       all_level: "уровень"
+      create:
+        notice: "Бейдж создан"
 
     base:
       admin_required:

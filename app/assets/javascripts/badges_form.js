@@ -10,12 +10,12 @@ document.addEventListener('turbolinks:load', function () {
 function formOptionsHandler() {
     var formParam = document.querySelector("#param");
     var selectParam = document.querySelector("#badge_param");
-    var categories_data = document.querySelector("#data-categories").dataset.categories;
-    var tests_data = document.querySelector("#data-tests").dataset.tests;
-    var levels_data = document.querySelector("#data-levels").dataset.levels;
-    var categories = JSON.parse(categories_data);
-    var tests = JSON.parse(tests_data);
-    var levels = JSON.parse(levels_data);
+    var categoriesData = document.querySelector("#data-categories").dataset.categories;
+    var testsData = document.querySelector("#data-tests").dataset.tests;
+    var levelsData = document.querySelector("#data-levels").dataset.levels;
+    var categories = JSON.parse(categoriesData);
+    var tests = JSON.parse(testsData);
+    var levels = JSON.parse(levelsData);
 
     formParam.classList.remove("hide");
     // console.log(levels);

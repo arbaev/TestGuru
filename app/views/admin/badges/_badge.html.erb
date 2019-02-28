@@ -1,7 +1,16 @@
 <tr>
   <td class="align-middle"><%= badge.name %></td>
-  <td class="align-middle"><%= image_tag badge.image_url %></td>
+  <td class="align-middle"><%= image_tag badge.image_url, class: "badge_icon" %></td>
   <td class="align-middle"><%= badge.criterion %></td>
   <td class="align-middle"><%= badge.param %></td>
+  <td class="align-middle">
+    <%= link_to t('.edit'),
+                edit_admin_badge_path(badge),
+                data: { badge_id: badge.id, text_edit: t('.edit'), text_cancel: t('.cancel') } %>
+  </td>
+  <td class="align-middle"><%= link_to t('.delete'), admin_badge_path(badge),
+                                       method: :delete,
+                                       data: {confirm: t('.sure')} %>
+  </td>
 
 </tr>
