@@ -1,0 +1,41 @@
+<div class="row m-3">
+  <%= content_tag :div, id: "data-categories", data: {categories: @categories&.pluck(:id, :title)} do %>
+  <% end %>
+  <%= content_tag :div, id: "data-tests", data: {tests: @tests&.pluck(:id, :title)} do %>
+  <% end %>
+  <%= content_tag :div, id: "data-levels", data: {levels: levels&.to_a} do %>
+  <% end %>
+  <div class="col- col-sm-12 col-md-6">
+    <%= form_with model: [:admin, @badge], local: true do |form| %>
+      <%= render 'shared/errors', resource: @badge %>
+
+      <div class="form-group">
+        <%= form.label :name %><br>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :image_url %><br>
+        <%= form.text_field :image_url, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :criterion %><br>
+        <%= form.select :criterion, Badge.criterion, {prompt: true}, {class: 'form-control'} %>
+      </div>
+
+      <div class="form-group hide" id="param">
+        <%= form.label :param %><br>
+        <select class="form-control" name="badge[param]" id="badge_param">
+          <%= options_for_select(levels.invert.to_a) %>
+        </select>
+
+        <%#= form.text_field :param, class: 'form-control' %>
+      </div>
+
+      <%= form.submit class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+
+

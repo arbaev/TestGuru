@@ -194,6 +194,11 @@ ru:
         gist_user: "Кем создан"
         gist_created_at: "Когда создан"
 
+    badges:
+      first_try: "c первой попытки"
+      all_category: "категорию"
+      all_level: "уровень"
+
     base:
       admin_required:
         alert: "Вы не администратор"

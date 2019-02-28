@@ -1,0 +1,7 @@
+<h1><%= t('.header') %></h1>
+
+<%= link_to t('.create_new'), new_admin_badge_path %>
+
+<%= render 'shared/errors', resource: @badge %>
+
+<%= render partial: 'admin/badges/badge_table', locals: { badge: @badges } %>

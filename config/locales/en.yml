@@ -194,6 +194,11 @@ en:
         gist_user: "User email"
         gist_created_at: "Created at"
 
+    badges:
+      first_try: "first try"
+      all_category: "all category"
+      all_level: "all level"
+
     base:
       admin_required:
         alert: "You are not admin"
