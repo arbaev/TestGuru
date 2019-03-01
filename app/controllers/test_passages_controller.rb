@@ -10,7 +10,11 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      TestsMailer.completed_test(@test_passage).deliver_now
+      UserBadgeService.new(@test_passage).give_badges
+
+      # FIXME: отключено на время разработки беджей и таймера
+      # TestsMailer.completed_test(@test_passage).deliver_now
+
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
