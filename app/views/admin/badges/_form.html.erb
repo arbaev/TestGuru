@@ -1,9 +1,9 @@
 <div class="row m-3">
-  <%= content_tag :div, id: "data-categories", data: {categories: @categories&.pluck(:id, :title)} do %>
+  <%= content_tag :div, id: "data-categories", data: {categories: @categories.pluck(:id, :title)} do %>
   <% end %>
-  <%= content_tag :div, id: "data-tests", data: {tests: @tests&.pluck(:id, :title)} do %>
+  <%= content_tag :div, id: "data-tests", data: {tests: @tests.pluck(:id, :title)} do %>
   <% end %>
-  <%= content_tag :div, id: "data-levels", data: {levels: levels&.to_a} do %>
+  <%= content_tag :div, id: "data-levels", data: {levels: levels.to_a} do %>
   <% end %>
   <div class="col- col-sm-12 col-md-6">
     <%= form_with model: [:admin, @badge], local: true do |form| %>
@@ -11,17 +11,17 @@
 
       <div class="form-group">
         <%= form.label :name %><br>
-        <%= form.text_field :name, class: 'form-control' %>
+        <%= form.text_field :name, autofocus: true, placeholder: true, class: 'form-control' %>
       </div>
 
       <div class="form-group">
         <%= form.label :image_url %><br>
-        <%= form.text_field :image_url, class: 'form-control' %>
+        <%= form.text_field :image_url, placeholder: true, class: 'form-control' %>
       </div>
 
       <div class="form-group">
         <%= form.label :criterion %><br>
-        <%= form.select :criterion, Badge.criterion, {prompt: true}, {class: 'form-control'} %>
+        <%= form.select :criterion, Badge.criterion, {prompt: t('helpers.select.badge.criterion')}, {class: 'form-control'} %>
       </div>
 
       <div class="form-group hide" id="param">

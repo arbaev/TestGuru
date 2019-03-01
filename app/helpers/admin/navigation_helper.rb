@@ -14,4 +14,8 @@ module Admin::NavigationHelper
   def link_to_gists
     link_to t('helpers.admin.navigation.gists'), admin_gists_path
   end
+
+  def link_to_badges
+    link_to t('helpers.admin.navigation.badges'), admin_badges_path
+  end
 end

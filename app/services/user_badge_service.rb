@@ -8,13 +8,7 @@ class UserBadgeService
   def give_badges
     badges = Badge.all
     badges.map do |badge|
-      check_badge_rule(badge, @user)
-    end
-  end
-
-  def check_badge_rule(badge, user)
-    if send(badge.criterion.to_sym, badge.param.to_i)
-      user.badges.push(badge)
+      @user.badges.push(badge) if send(badge.criterion.to_sym, badge.param.to_i)
     end
   end
 
