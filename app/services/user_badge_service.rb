@@ -14,7 +14,7 @@ class UserBadgeService
 
   def check_badge_rule(badge, user)
     if send(badge.criterion.to_sym, badge.param.to_i)
-      user.user_badges.push(badge)
+      user.badges.push(badge)
     end
   end
 
