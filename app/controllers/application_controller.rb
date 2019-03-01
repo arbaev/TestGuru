@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_filter :expire_hsts
+  before_action :expire_hsts
 
   def default_url_options
     {lang: (I18n.locale unless I18n.locale == I18n.default_locale)}
