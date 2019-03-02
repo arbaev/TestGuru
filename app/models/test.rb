@@ -18,6 +18,8 @@ class Test < ApplicationRecord
       .order(title: :desc)
   }
 
+  enum levels: %i[easy elementary advanced hard pro]
+
   def self.by_category(category)
     tests_by_category(category).pluck(:title)
   end

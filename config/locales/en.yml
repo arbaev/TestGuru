@@ -212,9 +212,10 @@ en:
         gist_created_at: "Created at"
 
     badges:
-      first_try: "first try"
-      all_category: "all category"
-      all_level: "all level"
+      first_try: "Passed the test on the first attempt"
+      all_category: "Passed all tests of category"
+      all_level: "Passed all tests of level"
+      any: "Any"
       index:
         header: "Badges"
         create_new: "Create new badge"

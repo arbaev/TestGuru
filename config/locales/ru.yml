@@ -212,9 +212,10 @@ ru:
         gist_created_at: "Когда создан"
 
     badges:
-      first_try: "c первой попытки"
-      all_category: "категорию"
-      all_level: "уровень"
+      first_try: "Пройден тест c первой попытки"
+      all_category: "Пройдены все тесты категории"
+      all_level: "Пройдены все тесты уровня"
+      any: "Любой"
       index:
         header: "Бейджи"
         create_new: "Создать новый бейдж"

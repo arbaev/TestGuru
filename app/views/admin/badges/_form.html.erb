@@ -1,7 +1,7 @@
 <div class="row m-3">
   <%= content_tag :div, id: "data-categories", data: {categories: @categories.pluck(:id, :title)} do %>
   <% end %>
-  <%= content_tag :div, id: "data-tests", data: {tests: @tests.pluck(:id, :title)} do %>
+  <%= content_tag :div, id: "data-tests", data: {tests: tests_with_any} do %>
   <% end %>
   <%= content_tag :div, id: "data-levels", data: {levels: levels.to_a} do %>
   <% end %>
@@ -21,7 +21,7 @@
 
       <div class="form-group">
         <%= form.label :criterion %><br>
-        <%= form.select :criterion, Badge.criterion, {prompt: t('helpers.select.badge.criterion')}, {class: 'form-control'} %>
+        <%= form.select :criterion, criterions_collection, {prompt: t('helpers.select.badge.criterion')}, {class: 'form-control'} %>
       </div>
 
       <div class="form-group hide" id="param">

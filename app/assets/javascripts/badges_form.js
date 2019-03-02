@@ -18,21 +18,23 @@ function formOptionsHandler() {
     var levels = JSON.parse(levelsData);
 
     formParam.classList.remove("hide");
-    // console.log(levels);
 
-    if (this.value == "first_try") {
-        setOptions(tests, selectParam)
-    } else if (this.value == "all_category") {
-        setOptions(categories, selectParam)
-    } else {
-        setOptions(levels, selectParam)
+    switch (this.value) {
+        case 'first_try':
+            setOptions(tests, selectParam);
+            break;
+        case 'all_category':
+            setOptions(categories, selectParam);
+            break;
+        default:
+            setOptions(levels, selectParam);
     }
 }
 
-function setOptions(items_array, select) {
+function setOptions(itemsArray, select) {
     select.options.length = 0;
 
-    items_array.map(function (item) {
+    itemsArray.map(function (item) {
         var option = document.createElement("option");
         option.value = item[0];
         option.text = item[1];
