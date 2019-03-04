@@ -11,7 +11,7 @@ class TestPassagesController < ApplicationController
 
     if @test_passage.completed?
       new_badges = UserBadgeService.new(@test_passage).give_badges
-      @test_passage.user.badges.push(new_badges) if new_badges
+      @test_passage.user.badges.push(new_badges)
 
       # FIXME: отключено на время разработки беджей и таймера
       # TestsMailer.completed_test(@test_passage).deliver_now

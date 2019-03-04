@@ -1,4 +1,6 @@
 class Test < ApplicationRecord
+  LEVELS = %i[easy elementary advanced hard pro]
+
   belongs_to :category
   belongs_to :author, class_name: 'User'
   has_many :questions, dependent: :destroy
@@ -17,8 +19,6 @@ class Test < ApplicationRecord
       .where(categories: { title: cat })
       .order(title: :desc)
   }
-
-  enum levels: %i[easy elementary advanced hard pro]
 
   def self.by_category(category)
     tests_by_category(category).pluck(:title)

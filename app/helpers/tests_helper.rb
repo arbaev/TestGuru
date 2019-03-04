@@ -1,6 +1,6 @@
 module TestsHelper
   def levels
-    Test.levels.map { |k, i| [i, I18n.t("helpers.test.#{k}")] }.to_h
+    Test::LEVELS.map.with_index { |k, i| [i, I18n.t("helpers.test.#{k}")] }.to_h
   end
 
   def test_level(test)
