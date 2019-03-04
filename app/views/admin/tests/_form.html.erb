@@ -18,6 +18,11 @@
         <%= form.collection_select :category_id, Category.all, :id, :title, {prompt: true}, {class: 'form-control'} %>
       </div>
 
+      <div class="form-group">
+        <%= form.label :duration %><br>
+        <%= form.number_field :duration, in: 0..150, step: 1, value: 0, class: 'form-control' %>
+      </div>
+
       <%= form.submit class: 'btn btn-primary' %>
     <% end %>
   </div>

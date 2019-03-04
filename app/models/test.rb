@@ -8,7 +8,9 @@ class Test < ApplicationRecord
   has_many :users, through: :test_passages, dependent: :destroy
 
   validates :title, presence: true, uniqueness: { scope: :level }
-  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :level, :duration, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  before_create :set_duration_in_seconds
 
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
@@ -26,5 +28,11 @@ class Test < ApplicationRecord
 
   def total_questions
     questions.size
+  end
+
+  private
+
+  def set_duration_in_seconds
+    self.duration = duration * 60
   end
 end

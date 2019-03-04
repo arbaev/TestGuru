@@ -19,15 +19,19 @@ class TestPassage < ApplicationRecord
   end
 
   def result_percentage
-    (score * 100 / test.total_questions)
+    score * 100 / test.total_questions
   end
 
   def successful?
-    result_percentage >= SUCCESS_VALUE if completed?
+    in_time? && result_percentage >= SUCCESS_VALUE if completed?
   end
 
   def question_number
     test.questions.order(:id).where('id <= ?', current_question).size
+  end
+
+  def passage_duration
+    self.updated_at - self.created_at
   end
 
   private
@@ -54,5 +58,11 @@ class TestPassage < ApplicationRecord
 
   def calc_result
     self.result = result_percentage
+  end
+
+  def in_time?
+    duration = self.test.duration
+
+    duration.zero? || passage_duration <= duration
   end
 end
