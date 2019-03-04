@@ -7,6 +7,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question
+  before_save :calc_result, if: :completed?
 
   def accept!(answer_ids)
     self.score += 1 if correct_answer?(answer_ids)
@@ -18,7 +19,7 @@ class TestPassage < ApplicationRecord
   end
 
   def result_percentage
-    (score * 100.0 / test.total_questions).round(2)
+    (score * 100 / test.total_questions)
   end
 
   def successful?
@@ -49,5 +50,9 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.right_answers
+  end
+
+  def calc_result
+    self.result = result_percentage
   end
 end
