@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Test < ApplicationRecord
-  LEVELS = %i[easy elementary advanced hard pro]
+  LEVELS = %i[easy elementary advanced hard pro].freeze
 
   belongs_to :category
   belongs_to :author, class_name: 'User'
