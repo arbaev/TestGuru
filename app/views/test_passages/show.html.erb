@@ -2,7 +2,7 @@
 <p><%= total_questions_helper %></p>
 
 <% unless @test_passage.test.duration.zero? %>
-  <%= content_tag :div, id: "timer", data: {duration: @test_passage.remain_duration} do %><% end %>
+  <div id="timer" data-duration="<%= @test_passage.remain_duration %>"></div>
 <% end %>
 
 <div class="progress">

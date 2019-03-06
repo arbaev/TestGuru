@@ -69,7 +69,7 @@ class TestPassage < ApplicationRecord
   end
 
   def in_time?
-    duration = self.test.duration
+    duration = test.duration
 
     duration.zero? || passage_duration <= duration
   end
