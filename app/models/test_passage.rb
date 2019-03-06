@@ -10,8 +10,12 @@ class TestPassage < ApplicationRecord
   before_save :calc_result, if: :completed?
 
   def accept!(answer_ids)
-    self.score += 1 if correct_answer?(answer_ids)
-    save!
+    if in_time?
+      self.score += 1 if correct_answer?(answer_ids)
+      save!
+    else
+      self.current_question = nil
+    end
   end
 
   def completed?
@@ -31,7 +35,11 @@ class TestPassage < ApplicationRecord
   end
 
   def passage_duration
-    self.updated_at - self.created_at
+    (Time.current - self.created_at).to_i
+  end
+
+  def remain_duration
+    self.test.duration - passage_duration
   end
 
   private
