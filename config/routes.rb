@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'guru', to: 'users#show'
 
   resources :feedbacks, only: %i[new create]
+  resources :badges, only: :index
 
   resources :tests, only: :index do
     post :start, on: :member
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :badges
     resources :gists, only: :index
   end
 end

@@ -1,0 +1,14 @@
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th><%= t('.name') %></th>
+      <th><%= t('.image_url') %></th>
+      <th><%= t('.criterion') %></th>
+      <th><%= t('.param') %></th>
+      <th colspan="2"><%= t('.actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'admin/badges/badge', collection: badge %>
+  </tbody>
+</table>

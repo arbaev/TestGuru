@@ -23,9 +23,11 @@ en:
         new_question: "Create new question"
         new_test: "Create new test"
         gists: "Gists list"
+        badges: "Manage badges"
 
     application:
       to_root: "To main page"
+      to_badges: "To all badges"
 
     label:
       test:
@@ -41,6 +43,12 @@ en:
         name: "Name"
         email: "Email"
         message: "Message"
+      badge:
+        name: "Badge ame"
+        image_url: "Picture URL"
+        criterion: "Criterion"
+        param: "Parameter"
+
     submit:
       test:
         create: "Create test"
@@ -55,13 +63,22 @@ en:
         show: "Next"
       feedback:
         create: "Send message"
+      badge:
+        create: "Create badge"
+        update: "Edit badge"
+
     placeholder:
       feedback:
         name: "Your name"
         email: "Your email"
         message: "Write the message"
+      badge:
+        name: "example: Done all tests of 'easy' level"
+        image_url: "Full URL to picture"
 
     select:
+      badge:
+        criterion: "Select badge rule"
       prompt: "Select category"
 
   shared:
@@ -194,6 +211,36 @@ en:
         gist_user: "User email"
         gist_created_at: "Created at"
 
+    badges:
+      first_try: "Passed the test on the first attempt"
+      all_category: "Passed all tests of category"
+      all_level: "Passed all tests of level"
+      any: "Any"
+      index:
+        header: "Badges"
+        create_new: "Create new badge"
+      badge_table:
+        name: "Badge name"
+        image_url: "Picture URL"
+        criterion: "Criterion"
+        param: "Parameter"
+        actions: "Actions"
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are You sure?"
+      new:
+        header: "Creating the badge"
+      create:
+        notice: "Badge was created"
+      update:
+        notice: "Badge updated"
+      destroy:
+        notice: "Badge deleted"
+
+      edit:
+        header_html: "Badge &laquo;%{title}&raquo;"
+
     base:
       admin_required:
         alert: "You are not admin"
@@ -204,6 +251,15 @@ en:
     create:
       notice: "We have received your message."
       alert: "There was an error sending your message. Please try again."
+
+  badges:
+    badge_table:
+      name: "Badge name"
+      image_url: "Picture URL"
+      criterion: "Criterion"
+      param: "Parameter"
+    index:
+      header: "All available badges"
 
   test_passages:
     show:
@@ -236,6 +292,7 @@ en:
       profile: "Profile"
       test_passage: "Test passage"
       test_authorship: "Test authorship"
+      user_badges: "Achievements"
 
   custom_sessions:
     create:

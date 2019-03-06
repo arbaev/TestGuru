@@ -10,4 +10,8 @@ module ApplicationHelper
   def root_link
     link_to t('helpers.application.to_root'), root_path
   end
+
+  def badges_link
+    link_to t('helpers.application.to_badges'), badges_path
+  end
 end

@@ -23,9 +23,11 @@ ru:
         new_question: "Создать новый вопрос"
         new_test: "Создать новый тест"
         gists: "Список гистов"
+        badges: "Управление бейджами"
 
     application:
       to_root: "На главную"
+      to_badges: "Посмотреть все бейджи"
 
     label:
       test:
@@ -41,6 +43,12 @@ ru:
         name: "Имя"
         email: "Email"
         message: "Сообщение"
+      badge:
+        name: "Название"
+        image_url: "URL картинки"
+        criterion: "Критерий"
+        param: "Параметр"
+
     submit:
       test:
         create: "Создать тест"
@@ -53,13 +61,22 @@ ru:
         update: "Изменить ответ"
       feedback:
         create: "Отправить сообщение"
+      badge:
+        create: "Создать бейдж"
+        update: "Изменить бейдж"
+
     placeholder:
       feedback:
         name: "Ваше имя"
         email: "Ваш email"
         message: "Напишите сообщение"
+      badge:
+        name: "например: Пройдены все тесты уровня 'Простой'"
+        image_url: "Укажите полный URL картинки"
 
     select:
+      badge:
+        criterion: "Выберите условие бейджа"
       prompt: "Выберите категорию"
 
   shared:
@@ -194,6 +211,35 @@ ru:
         gist_user: "Кем создан"
         gist_created_at: "Когда создан"
 
+    badges:
+      first_try: "Пройден тест c первой попытки"
+      all_category: "Пройдены все тесты категории"
+      all_level: "Пройдены все тесты уровня"
+      any: "Любой"
+      index:
+        header: "Бейджи"
+        create_new: "Создать новый бейдж"
+      badge_table:
+        name: "Название"
+        image_url: "URL картинки"
+        criterion: "Критерий"
+        param: "Параметр"
+        actions: "Действия"
+      badge:
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      new:
+        header: "Создание бейджа"
+      create:
+        notice: "Бейдж создан"
+      update:
+        notice: "Бейдж обновлён"
+      destroy:
+        notice: "Бейдж удалён"
+      edit:
+        header_html: "Бейдж &laquo;%{title}&raquo;"
+
     base:
       admin_required:
         alert: "Вы не администратор"
@@ -203,6 +249,15 @@ ru:
       header: "Отправить отзыв администрации"
     notice: "Мы получили ваше сообщение."
     alert: "Произошла ошибка при отправке сообщения. Попробуйте ещё раз, пожалуйста."
+
+  badges:
+    badge_table:
+      name: "Название"
+      image_url: "URL картинки"
+      criterion: "Критерий"
+      param: "Параметр"
+    index:
+      header: "Все доступные бейджи"
 
   test_passages:
     show:
@@ -235,6 +290,7 @@ ru:
       profile: "Профиль"
       test_passage: "Пройденные тесты"
       test_authorship: "Авторские тесты"
+      user_badges: "Достижения"
 
   custom_sessions:
     create:
