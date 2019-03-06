@@ -11,6 +11,7 @@ en:
       total: "Total questions: %{total}"
       success: "Congratulations! Your result is %{result}%, you passed the test."
       fail: "Sorry! Your result is %{result}%, you failed the test."
+      time: "Sorry! Your result is %{result}%, but you spent %{time} seconds. The maximum time to complete this test is %{duration} seconds."
 
     question:
       create: "Create"
@@ -126,6 +127,9 @@ en:
       show:
         header_html: "Test &laquo;%{title}&raquo;"
         level: "Level"
+        duration:
+          many: "Duration: %{duration} minutes"
+          one: "Duration: %{duration} minute"
         answers: "Answers"
         question: "Question"
         actions: "Actions"

@@ -10,8 +10,12 @@ class TestPassage < ApplicationRecord
   before_save :calc_result, if: :completed?
 
   def accept!(answer_ids)
-    self.score += 1 if correct_answer?(answer_ids)
-    save!
+    if in_time?
+      self.score += 1 if correct_answer?(answer_ids)
+      save!
+    else
+      self.current_question = nil
+    end
   end
 
   def completed?
@@ -19,15 +23,23 @@ class TestPassage < ApplicationRecord
   end
 
   def result_percentage
-    (score * 100 / test.total_questions)
+    score * 100 / test.total_questions
   end
 
   def successful?
-    result_percentage >= SUCCESS_VALUE if completed?
+    in_time? && result_percentage >= SUCCESS_VALUE if completed?
   end
 
   def question_number
     test.questions.order(:id).where('id <= ?', current_question).size
+  end
+
+  def passage_duration
+    (Time.current - self.created_at).to_i
+  end
+
+  def remain_duration
+    self.test.duration - passage_duration
   end
 
   private
@@ -54,5 +66,11 @@ class TestPassage < ApplicationRecord
 
   def calc_result
     self.result = result_percentage
+  end
+
+  def in_time?
+    duration = test.duration
+
+    duration.zero? || passage_duration <= duration
   end
 end

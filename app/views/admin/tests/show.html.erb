@@ -1,6 +1,7 @@
 <h1><%= t('.header_html', title: @test.title) %></h1>
 
 <p><%= t('.level') %>: <strong><%= test_level(@test) %> (<%= @test.level %>)</strong></p>
+<p><%= t('.duration', duration: @test.duration / 60) %>: <strong><%= @test.duration / 60 %></strong></p>
 
 <table class="table">
   <thead class="thead-light">

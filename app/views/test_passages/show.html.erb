@@ -1,6 +1,10 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <p><%= total_questions_helper %></p>
 
+<% unless @test_passage.test.duration.zero? %>
+  <div id="timer" data-duration="<%= @test_passage.remain_duration %>"></div>
+<% end %>
+
 <div class="progress">
   <%= content_tag :div,
                   class: "progress-bar",
@@ -18,7 +22,7 @@
   <%= @test_passage.question_number %>. <%= @test_passage.current_question.body %>
 </h2>
 
-<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
+<%= form_with url: test_passage_path(@test_passage), local: true, id: :answer_form, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids,
                                   @test_passage.current_question.answers,
                                   :id, :body,
